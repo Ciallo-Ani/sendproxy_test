@@ -27,7 +27,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
         with:
-          path: extension
+          path: project
           
       - name: Checkout Metamod
         uses: actions/checkout@v2
@@ -65,9 +65,7 @@ jobs:
       - name: Build
         shell: bash
         run: |
-          cd extension
-          ls
-          mkdir build && cd build
+          cd project && mkdir build && cd build
           CC=clang CXX=clang++ python ../configure.py --sdks ${{ matrix.sdks }} --enable-optimize
           ambuild
           
@@ -75,4 +73,4 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: ${{ runner.os }}
-          path: extension/build/package
+          path: project/extension/build/package
