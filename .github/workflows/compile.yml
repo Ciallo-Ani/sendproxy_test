@@ -18,8 +18,9 @@ jobs:
       - name: Install Linux packages
         if: runner.os == 'Linux'
         run: |
-          sudo apt update
-          sudo apt install -yq --no-install-recommends g++-multilib
+          sudo dpkg --add-architecture i386
+          sudo apt-get update
+          sudo apt-get install -y clang g++-multilib
       - name: Set up Python
         uses: actions/setup-python@v2
 
