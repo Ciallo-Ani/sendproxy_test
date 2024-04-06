@@ -66,6 +66,7 @@ jobs:
         shell: bash
         run: |
           cd extension
+          ls
           mkdir build && cd build
           CC=clang CXX=clang++ python ../configure.py --sdks ${{ matrix.sdks }} --enable-optimize
           ambuild
