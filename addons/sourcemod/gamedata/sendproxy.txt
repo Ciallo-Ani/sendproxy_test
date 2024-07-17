@@ -1,5 +1,26 @@
 "Games"
 {
+	"css"
+	{
+		"Signatures"
+		{
+			"CGameClient::ShouldSendMessages"
+			{
+				"library"			"engine"
+				"linux"				"@_ZN11CGameClient18ShouldSendMessagesEv"
+			}
+			"CGameServer::SendClientMessages"
+			{
+				"library"			"engine"
+				"linux"				"@_ZN11CGameServer18SendClientMessagesEb"
+			}
+			"SV_ComputeClientPacks"
+			{
+				"library"			"engine"
+				"linux"				"@_Z21SV_ComputeClientPacksiPP11CGameClientP14CFrameSnapshot"
+			}
+		}
+	}
 	"tf"
 	{
 		"Signatures"
