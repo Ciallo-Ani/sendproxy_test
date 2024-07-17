@@ -9,10 +9,10 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [windows-latest, ubuntu-latest]
+        os: [ubuntu-latest]
         sourcemod-version: [master]
         metamod-version: [master]
-        sdks: [sdk2013, tf2, csgo]
+        sdks: [sdk2013, tf2, csgo, css]
 
     steps:
       - name: Install Linux packages
